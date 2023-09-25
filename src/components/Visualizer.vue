@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import type { Ref } from 'vue'
 import {
   bubbleSort,
   quickSort,
@@ -36,9 +37,9 @@ import {
 } from "../utils/sortingAlgorithms";
 import { store, setIsSorting } from "../store";
 
-const numbers = ref([]);
-const arraySize = ref(150);
-const windowWidth = ref(window.innerWidth);
+const numbers:Ref<number[]> = ref([]);
+const arraySize:Ref<number> = ref(150);
+const windowWidth:Ref<number> = ref(window.innerWidth);
 //const sortingInProgress = ref(false);
 const handleResize = () => {
   windowWidth.value = window.innerWidth;
@@ -61,7 +62,7 @@ const generateArray = () => {
     // If sorting is in progress, stop it
     setIsSorting(false);
   }
-  const array = [];
+  const array:number[] = [];
   for (let i = 0; i < arraySize.value; i++) {
     array.push(randomNumbers(5, 550));
   }
