@@ -12,7 +12,7 @@
               type="range" 
               id="arraySize" 
               name="arraySize" 
-              min="25" max="arraySize" 
+              min="25" max="150" 
               step="25" 
               @change="generateArray">
             <label for="arraySize">Array size</label>
@@ -181,8 +181,18 @@ function arraysAreEqual(arrayOne: number[], arrayTwo: number[]) {
 }
 
 @media (max-width: 1368px) {
+
   .number {
     width: 4px;
+  }
+
+  .container{
+    width: 100%;
+    padding: 15px;
+  }
+
+  .buttons-container{
+   flex-direction: column;
   }
 }
 </style>
