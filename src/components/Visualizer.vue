@@ -149,6 +149,7 @@ function arraysAreEqual(arrayOne: number[], arrayTwo: number[]) {
   width: 100%;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .button {
@@ -194,5 +195,6 @@ function arraysAreEqual(arrayOne: number[], arrayTwo: number[]) {
   .buttons-container{
    flex-direction: column;
   }
+
 }
 </style>
